@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uglier You</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Simple cart -->
+    <script src="assets/simpleCart.js"></script>
+    <script>
+        simpleCart({
+            checkout: {
+                type: "PayPal",
+                email: "mhrgrj@gmail.com"
+            },
+            cartStyle: "table",
+            currency: "CAD",
+            taxRate: 0.13
+
+
+        });
+
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/fabric.min.js"></script>
+    <script type="text/javascript" src="JavaScript/index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!--    Favicon-->
+    <link rel="shortcut icon" type="image/png" href="Photos/favicon.png" />
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><i class="fas fa-tshirt"></i> Uglier<b>You</b></a>
+
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarId">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarId">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section1-shirts">Top Selections</a></li>
+                    <li><a href="#section2-reviews">Reviews</a></li>
+                    <li><a href="#section3-buildYourOwnShirt">Make Your Own</a></li>
+                    <li><a href="#section4-contactUs">Contact Us</a></li>
+                    <li><a href="/seemore.html">Our Catalogue</a></li>
+
+                    <!-- Currently not built, leads to checkout page for now -->
+                    <li class="nav-item">
+                        <a id="cartID" class="nav-link" data-toggle="modal" data-target="#checkoutBox"><span class="simpleCart_quantity numItemsDisabled" ></span> item(s) in Cart </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Nav -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="checkoutBox" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class=" modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h3 class="modal-title"><i class="fas fa-shopping-cart"></i> Cart</h3>
+                </div>
+
+                <div class="cart modal-body">
+
+                    <div class="simpleCart_items"></div><br><br>
+                    <!-- cart total (ex. $23.11)-->
+
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <p class="cartDetail"><b>Quantity</b></p>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="simpleCart_quantity"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <p class="cartDetail"><b>Total Price (Before Tax)</b></p>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="simpleCart_total"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <p class="cartDetail"><b>Tax Amount</b></p>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="simpleCart_tax"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <p class="cartDetail"><b>Total Amount</b></p>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="simpleCart_grandTotal"></div>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+
+                    <a href="javascript:;" class="simpleCart_empty"> <button type="button" class= "btn btn-default clearButton" data-dismiss="modal"> <b>Clear Cart</b> </button></a>
+
+                    <button type="button" class="btn btn-default checkoutPage simpleCart_checkout">
+                    <b>Checkout</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+
+
+    <!-- MAIN BANNER -->
+
+    <div class="jumbotron section1-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4" id="main">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 style="font-family: handWriting; font-size: 700%; line-height: 1.5"><b>Uglier You</b></h1>
+                    <p class="lead" style="font-family: handWriting; font-size: 200%;">Ever wanted to look like THESE people? NOW YOU CAN!
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+
+
+    <!-- Content 1: Popular Shirt Options -->
+    <section class="Cool/Popular Shirts">
+        <div class="container-fluid chevron-contain">
+            <div class="row anchor-contain">
+                <div class="col-xs-1 col-centered">
+                    <a href="#section1-shirts"><img class="anchor" id="anchor-scroll" alt="Arrow Down Icon" src="Photos/chevron.png" /></a>
+                </div>
+            </div>
+        </div>
+        <!-- Chevron end -->
+
+
+
+        <div id="section1-shirts" class="container-fluid section1">
+            <div id="coolShirtsRow" class="container-fluid content coolShirts">
+
+                <!-- Title Section -->
+                <div class="container-fluid text-center">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1 class="popularBooks">
+                                Top Selections
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row" "line-straight">
+                        <div class="col-xs-12">
+                            <img class="center-block" src="/Photos/csselements/line-straight-thin.png">
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+                <!-- Title Section End -->
+
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/kale.png" />
+                        <div class="description">
+                            <!--
+                        <h3 id="name"> Cool Shirt 1</h3>
+                        <p id="price">Price: $20</p> -->
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> Little Lamb </h3>
+                                <p>
+                                    <span class="item_price">$24.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/65wat.png" />
+                        <div class="description">
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> 65 WAT </h3>
+                                <p><span class="item_price">$17.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/awwyeah.png" />
+                        <div class="description">
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name">Awww yeahhh!</h3>
+                                <p><span class="item_price">$23.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/bruddaShirt.png" />
+                        <div class="description">
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name">Brudda, do you no da wae? </h3>
+                                <p><span class="item_price">$19.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-fluid content popularShirts">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/balancetotheswamp.png" />
+                        <div class="description">
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> Balance to the Swamp</h3>
+                                <p><span class="item_price">$17.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/JJ.png" />
+                        <div class="description">
+                            <div class="description">
+                                <div class="simpleCart_shelfItem">
+                                    <h3 class="item_name"> Is that a JoJo reference?</h3>
+                                    <p><span class="item_price">$18.99</span><br>
+                                        <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/niceshirt.png" />
+                        <div class="description">
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> Nice Shirt, Fam </h3>
+                                <p><span class="item_price">$22.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 item-container">
+                        <img class="img-responsive" src="Photos/shirtdesigns/circlepunch.png" />
+                        <div class="description">
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> GOTTEM! </h3>
+                                <p><span class="item_price">$29.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--    Button -->
+                <div class="row">
+                    <div class="col-sm-9">
+                    </div>
+                    <a href="/seemore.html"></a>
+                    <div class="col-md-2 col-sm-3 col-xs-6 pull-right add-top-padding">
+                        <a href="/seemore.html" class="btn btn-primary-active add-top-padding">See More
+                        </a>
+                    </div>
+
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content 2: User Reviews -->
+    <section class="reviews">
+        <div id="section2-reviews" class="container-fluid">
+
+            <!-- Title Section -->
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="popularBooks">
+                            What our customers are saying
+                        </h1>
+                    </div>
+                </div>
+                <div class="row" "line-straight">
+                    <div class="col-xs-12">
+                        <img class="center-block" src="/Photos/csselements/line-straight-thin.png">
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- Title Section End -->
+
+            <div class="row">
+                <div class="col">
+                    <div class="col-xs-4">
+                        <img class="img-responsive center-block" src="Photos/user1.png" style="height: 50%; width: 50%;" />
+                        <br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <br>
+                        <p class="sub_paragraph" style="color: black; text-align: justify;">I love my UglierYOU shirt! I bought the <i>"Little Lamb"</i> shirt. I've lost the love of my friends and family, but I know I'm still being stylish, at least! <br><br></p>
+                        <p style="font-size: 200%; font-family: handWriting; color: rgba(0,0,0,1);">-Matt Damon</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-xs-4">
+                        <img class="img-responsive center-block" src="Photos/user2.png" style="height: 50%; width: 50%;" />
+                        <br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <br>
+                        <p class="sub_paragraph" style="color: black; text-align: justify;">I love that the team behind UglierYOU doesn't care about how the world views you. I bought a <i>"GOTTEM"</i> shirt, and I couldn't be more happy. Style is subjective, reject what the higher ups tell you! <br><br></p>
+                        <p style="font-size: 200%; font-family: handWriting; color: rgba(0,0,0,1);">-Paris Hilton</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-xs-4">
+                        <img class="img-responsive center-block" src="Photos/user3.png" style="height: 50%; width: 50%;" />
+                        <br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <br>
+                        <p class="sub_paragraph" style="color: black; text-align: justify;">Oh man, oh man, are these shirts awesome or what?! Well, my girlfriend don't respond to me when I ask that question or when I wear my <i>"Brudda, do you no da wae?"</i>shirt but I still think it's great! <br><br></p>
+                        <p style="font-size: 200%; font-family: handWriting; color: rgba(0,0,0,1);">-Nick Cage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content 3: Shirt Creator -->
+
+    <section id="creator">
+        <div id="section3-buildYourOwnShirt" class="container-fluid">
+            <div class="row">
+
+                <!-- Title Section -->
+                <div class="container pull-left">
+                    <div class="col-xs-12 no-padding-left">
+                        <h1 class="popularBooks">
+                            Personalize Your Shirt
+                        </h1>
+                    </div>
+                </div>
+                <div class="row pull-left">
+                    <div class="col-xs-12 text-center index-section3-title">
+                        <img src="/Photos/csselements/line-straight-thin.png">
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- Title Section End -->
+
+
+            <div class="row-xs-5">
+                <div class="col-xs-5">
+
+                    <h2 id="title">1. Choose your shirt colour!</h2>
+                    <div class="row colors">
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="white" style="background-color: #ffffff;"></div>
+                        </div>
+
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="blue" style="background-color: #a9c7f3;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="darkBlue" style="background-color: #3f4abc;"></div>
+                        </div>
+
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="purple" style="background-color: #d0bfd8;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="pink" style="background-color: #ff7cc9;"></div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row colors">
+
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="red" style="background-color: #ff283a;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="yellow" style="background-color: #f5ff9c;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="lightGreen" style="background-color: #afefad;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="green" style="background-color: #75a284;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="black" style="background-color: #353535;"></div>
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="title">2. Add Photos </h2>
+                    <div class="row file">
+                        <div class="col-xs-6">
+                            <form id="uploadImg" runat="server">
+                                <input id="uploadedImg" type="file" accept="image/x-png,image/jpeg" />
+                                <button id="use" type="button"><b><i class="fas fa-cloud-upload-alt"></i> Upload</b></button>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <h2 id="title">3. Add Text</h2>
+                    <div class="row textArea">
+                        <textarea class="form-control editor" id="txtArea" rows="3" cols="10" maxlength="100" placeholder="Add Text..."></textarea>
+                        <button id="addtxt" type="button">Add Text</button>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <p id="sub-title">3.1. Change Font</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <select id="font-family">
+                                    <option value="Times New Roman">Times New Roman</option>
+                                    <option value="Pacifico">Pacifico</option>
+                                    <option value="VT323">VT323</option>
+                                    <option value="Quicksand">Quicksand</option>
+                                    <option value="Fancy">Fancy</option>
+                                    <option value="handWriting">Hand Writing</option>
+
+                                </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row font-colors">
+                        <div class="col-xs-5">
+                            <p id="sub-title">3.2. Select font color: </p>
+                        </div>
+                        <div class="col-xs-1">
+                            <div class="pallete " id="font-col-b" style="background-color: #000000;"></div>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="pallete" id="font-col-w" style="background-color: #ffffff;"></div>
+                        </div>
+
+                    </div>
+
+                    <h2 id="title">4. Pick your size</h2>
+                    <div class="row">
+                        <div>
+                            <select class="styled-select blue semi-square">
+                                    <option value="" disabled selected>Pick Your Size</option>
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row ">
+                        <button class="add2cart"><b><i class="fas fa-cart-plus"></i> Add to Cart</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-md-6 col-xs-12">
+                    <div id="canvasBG">
+                        <canvas id="c" width="220" height="400"></canvas>
+                    </div>
+                    <div class="row options">
+                        <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
+                        <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
+                    </div>
+
+
+                    <h4 class="statement"> ** Please note the final version of your custom design will be emailed to you for approval.</h4>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col-xs-1 info">
+                    <button class="help" id="showHelp" data-toggle="modal" data-target="#myModal"><i class="fas fa-question-circle" style="font-size:36px"></i></button>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
+                        </div>
+                        <div class="modal-body">
+                            <b>To personalize your own T-shirt:</b> <br>
+                            <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                            <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
+                            <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
+                            <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                            <b>5.</b> Select your size form the dropdown menu.<br>
+                            <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                            <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal end -->
+
+
+        </div>
+    </section>
+
+    <!-- Section 4: Get in touch -->
+    <section id="contact-us">
+        <!-- Left Panel Begins -->
+        <div id="section4-contactUs" class="container-fluid">
+            <div class="col-sm-9 no-padding-left" id="panel-left">
+                <div class="col-sm-12 no-padding-left">
+                    <h1>Get in Touch</h1>
+                </div>
+                <div class="col-sm-12 no-padding-left" id="guidingText">
+                    <h2>Please fill out the form and we will get back in touch with you
+                        <h2></h2>
+                    </h2>
+                </div>
+                <form action="" method="" id="feedback-form">
+                    <div class="col-sm-12 no-padding-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" id="usr">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 no-padding-left">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your email address" id="password">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 no-padding-left">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Message" id="comment"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="col-sm-12 no-padding-left">
+                    <button class="feedback" onclick="showSnackbar()"><b>Submit</b></button>
+                </div>
+                <div id="snackbar">Thanks for you feedback.</div>
+            </div>
+            <div class="col-sm-3 no-padding-left" id="panel-right">
+                <h3>Speak with us:</h3>
+                <p>
+
+                    For support or any other questions:
+
+                    <br> Reach us at support@UglierYou.com
+
+                </p>
+
+                <h3>Follow us on:</h3>
+                <div class="social-media">
+                    <a id="links" href="https://github.com/UglyShirtTrio/UglierYou" target="_blank"><i class="fab fa-github"></i></a>
+                    <a id="links" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a id="links" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a id="links" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Left Panel Ends -->
+    </section>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $("a").on('click', function(event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+    </script>
+
+
+
+    <script>
+        function showSnackbar() {
+            document.getElementById("feedback-form").reset();
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

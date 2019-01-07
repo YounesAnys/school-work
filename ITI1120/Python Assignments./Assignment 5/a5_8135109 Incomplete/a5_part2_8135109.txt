@@ -1,0 +1,17 @@
+2a)
+function doesn’t have a single loop. The function uses as many operations as needed without any multipliers.
+
+2b)
+Function has a single for loop. It operates n times, where n is the list length.
+
+2c)
+no loops. Functions use as many operations as needed without multipliers.
+
+2d)
+has a single for loop and therefore operates n times through the list, where n is list length.
+
+2e)
+has a triple nested for loop. the third loop operates, for example, 10,000 times per one 
+occurrence of the second loop, which also operates 10,000 times per one occurrence of the
+first loop, which also operates 10,000 times.
+Therefore, it operates 10,000*10,000*10,000 = 1,000,000,000,000 times. 

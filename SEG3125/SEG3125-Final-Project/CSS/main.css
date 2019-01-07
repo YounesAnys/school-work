@@ -1,0 +1,677 @@
+/* COLOR PALETTE TO BE USED
+
+    Primary Color:      navigation      - #002040
+
+    Secondary Color 1:  section 1       - #AEEEF5
+    Secondary Color 2:  section 2       - #F7F0EF
+    Secondary Color 3:  section 3       - #D9EBFF
+
+    Accent Color:       Highlight tool  - #FFA100
+*/
+
+/* FONTS USED HERE */
+
+/*@font-face {
+    font-family: "palanquin";
+    src:    url("/css/fonts/palanquin/palanquin-regular.tff")
+            format('truetype');
+}
+
+@font-face {
+    font-family: "palanquin";
+    src:    url("/css/fonts/palanquin/palanquin-bold.tff")
+            format('truetype');
+    font-weight: bold;
+} */
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("fonts/Pacifico.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "VT323";
+    src: url("fonts/VT323-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("fonts/Quicksand-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url("fonts/Inconsolata-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Fancy";
+    src: url("fonts/fancy.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "handWriting";
+    src: url("fonts/handWriting.otf") format("truetype");
+}
+
+
+
+/**** NAVBAR Styles ****/
+
+/* Default navbar color override */
+
+
+.nav.navbar-nav li a:hover,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a,
+numItemsDisabled {
+    color: rgba(0, 32, 64, 1);
+    background-color: white;
+    border: 0px;
+}
+
+
+.navbar-inverse .navbar-brand,
+.nav.navbar-nav li a,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
+a,
+li {
+    color: white;
+}
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
+    border: none;
+}
+
+/* NAV BAR STYLES END */
+
+.jumbotron {
+    /*    background-color: #0E0B16;*/
+    background-image: url(../Photos/DesignsAddedV3.png);
+    background-size: cover;
+    height: 93vh;
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+
+#main h1 {
+    text-align: center;
+    color: white;
+}
+
+#section4-contactUs h1,
+h2,
+h3,
+p {
+    color: white;
+}
+
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: .5s ease;
+}
+
+.img-responsive:hover {
+    opacity: 0.7;
+    background-color: #488996;
+
+}
+
+
+.logo {
+    font-size: 25px;
+}
+
+
+.checked {
+    color: orange;
+}
+
+
+#contact-us #panel-left h1 {
+    text-align: left;
+    font-size: 30px;
+}
+
+#contact-us h2 {
+    text-align: left;
+    font-size: 25px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: sans-serif;
+}
+
+.description {
+    /*    padding-left: 10px;*/
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-container {
+    padding: 5px;
+
+    /*    box-shadow: 5px 10px #B2B2B2;*/
+}
+
+#name {
+    text-align: center;
+    font-size: 18px;
+}
+
+#price {
+    text-align: center;
+}
+
+
+#panel-right p {
+    font-size: 14px;
+}
+
+#panel-right h3 {
+    font-size: 20px;
+}
+
+
+
+#panel-left h2 {
+    font-size: 20px;
+}
+
+/* Section used for Modifying sections */
+
+#section1-shirts {
+    background-color: #AEEEF5;
+    padding: 12vh 10vh;
+}
+
+#section2-reviews {
+    background-color: #F7F0EF;
+    padding: 12vh 10vh;
+}
+
+#section3-buildYourOwnShirt {
+    background-color: #D9EBFF;
+    padding: 12vh 10vh;
+}
+
+#section4-contactUs {
+    background-color: #002040;
+    padding: 4vh 10vh 10vh 10vh;
+}
+
+.no-padding-left{
+    padding-left: 0px;
+}
+
+/* End of Section Modifications */
+
+.canvas-container {
+    margin: 50px auto auto 175px;
+    text-align: center;
+    border: 0.5px dashed #8A8A8A;
+
+}
+
+#canvasBG {
+
+    background-image: url(../Photos/shirts/blue.png);
+    background-size: cover;
+    height: 600px;
+    width: 550px;
+    padding-top: 30px;
+
+}
+
+.pallete {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin: 5px;
+}
+
+textarea.form-control#txtArea {
+    height: 50px;
+    width: 200px;
+}
+
+row.colours {
+    padding-top: 15px;
+}
+
+
+button#addtxt {
+    margin: 5px;
+    padding: 6px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #002040;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+
+}
+
+button#addtxt:hover {
+    background-color: #13467a
+}
+
+button#addtxt:active {
+    background-color: #3e8e41;
+
+}
+
+
+button#use {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #002040;
+    background-color: #00CCFF;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+button#use:hover {
+    background-color: #59deff
+}
+
+
+.semi-square {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-left: 35px;
+
+}
+
+.help {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+p.instruction {
+    color: black;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 10px;
+    line-height: 1.5;
+
+}
+
+.modal-header {
+    background-color: cadetblue;
+    color: white;
+}
+
+.modal-content {
+    width: 120%;
+}
+
+
+.closeButton {
+    background-color: #5f9ea0;
+    color: white;
+
+}
+
+.closeButton:hover {
+    background-color: #7BCCCF;
+    color: white;
+}
+
+#del {
+    background-color: orange;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+#clr {
+
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.row.options {
+    padding-left: 28%;
+}
+
+
+.add2cart {
+    background-color: cadetblue;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin: 10px auto auto 20%;
+    padding: 10px;
+    width: 300px;
+
+}
+
+
+.checkoutBlackText {
+    color: black;
+}
+
+.chevron-down {
+    top: 55vh;
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-100%);
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+.statement {
+    color: red;
+    font-size: 18px;
+}
+
+.customize-options {
+    color: darkslategray;
+
+}
+
+#title {
+    font-size: 20px;
+    color: #075278;
+}
+
+#font-family {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+#sub-title {
+    color: #075278;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.colors {
+    margin-left: 5px;
+}
+
+.file {
+    margin-left: 5px;
+}
+
+.textArea {
+    margin-left: 20px;
+}
+
+.customzie {
+    color: darkcyan;
+}
+
+/* Freewall GRID LAYOUT CSS */
+
+#seemore-section1 {
+    margin-top: 100px;
+}
+
+#freewall-container {
+    width: 80%;
+    margin: auto;
+}
+
+.item {
+    background: rgb(135, 199, 135);
+    width: 320px;
+    height: 320px;
+}
+
+.brick {
+    box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.brick .img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+
+}
+
+
+/*anchor*/
+
+.anchor-contain {
+    background-color: #AEEEF5;
+    /*
+    padding: 0;
+    margin: 0;
+*/
+}
+
+.anchor {
+    height: 30px;
+    margin-top: 10px;
+    /*
+    padding: 0px;
+    margin: 0px;
+*/
+}
+
+div.container.chevron-contain {
+    background-color: #AEEEF5;
+    border:none;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+
+.item_add {
+    color: black;
+    font-size: 120%;
+}
+
+.item_price {
+    color: black;
+    font-size: 150%;
+}
+
+.item_name {
+    color: black;
+    font-family: pacifico;
+}
+
+
+
+#cartID:hover {
+    cursor: pointer;
+}
+/* Grid Layout */
+
+free-wall {
+    margin: auto;
+    height: 420px;
+}
+
+.cell {
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-color: #222;
+}
+
+.free-wall {
+    margin: 100px 50px 100px 50px;
+}
+
+.social-media{
+    font-size: 30px;
+    color: white;
+}
+
+#links{
+    margin: 5px;
+}
+
+
+/*Snackbar*/
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #D9EBFF;
+    color: #333;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    border-radius: 10px;
+
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.8;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.8;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 0.8;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 0.8;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+.feedback{
+    background-color: white;
+    color: black;
+    padding: 5px 20px 5px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+.index-section3-title {
+    padding: 0 15px 20px 15px;
+}
+
+
+.btn-primary-active {
+    width: 100%;
+    color: white;
+    background: #217af3;
+    padding: 12px;
+    font-size: 16px
+    border: 1px solid gray;
+    box-sizing: border-box;
+    border-left: none;
+    float: right;
+}
+
+.cartDetail {
+    color: black;
+    font-family: sans-serif;
+    font-size: 14px;
+
+}
+
+.cart {
+    margin: 30px;
+}
+
+th.item-name, th.item-price{
+    padding-right: 80px;
+
+}
+a.simpleCart_increment, a.simpleCart_decrement{
+    color: black;
+}
+
+a.simpleCart_remove {
+    color: red;
+
+}
+td.item-name, td.item-price{
+    padding-right: 80px;
+    line-height: 2;
+
+}
+
+td.item-total, th.item-total{
+    padding-left: 80px;
+}
+
+div.simplecart_items.table.th{
+    border: 2px;
+    border-style: solid;
+    border: black;
+}
+
+a.simpleCart_decrement{
+    padding-right:15px;
+}
+
+.add-top-padding {
+    margin-top: 25px;
+}
